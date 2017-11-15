@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ 
+<style>
+
+body{
+  background-image: url('img/01.jpg');
+  background-repeat: none;
+
+}
+.logo_img{
+  background-image: url('img/logo.png');
+}
+.logo_bg{
+  background-repeat: no-repeat;
+  width: 289px;
+  height: 65px;
+  background-size: cover;
+
+}
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+#logo{
+     width: 913px;
+     height: 213px;
+     background-image: url('img/logo.png');
+} 
+.md{
+margin-bottom: 20px;
+}
+
+.fontbig{
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: Microsoft JhengHei;
+}
+.fontsmall{
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: Microsoft JhengHei;
+}
+.fontm{
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Microsoft JhengHei;
+}
+
+
+
+
+</style>
+  </head>
+  <body>
+
+
+    <div class="container md">
+  <div class="row">
+    <div class="col-sm">
+      <div class="logo_bg logo_img mt-4"></div>
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+       <div class="btn-toolbar mt-5 " role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <a href="#comp">
+    <button type="button" class="btn btn-secondary">公司簡介</button>
+  </a>
+  <a href="#pdt">
+    <button type="button" class="btn btn-secondary">產品介紹</button>
+  </a>
+  <a href="#pcs">
+    <button type="button" class="btn btn-secondary">加工介紹</button>
+  </a>
+  <a href="#cus">
+    <button type="button" class="btn btn-secondary">客製訂做</button>
+  </a>
+  <a href="#au">
+    <button type="button" class="btn btn-secondary">關於我們</button>
+  </a>
+</div>
+  </div>
+    </div>
+  </div>
+</div>
+
+    
+ <div class="md ml-5 col-sm btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">  
+</nav>  
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+    <div class="slide">
+      <img src="img/i1.png" />
+        </div>
+    <div class="nav">
+      <label for="img-6" class="prev">&#x2039;</label>
+      <label for="img-2" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="img/i2.png" />
+        </div>
+    <div class="nav">
+      <label for="img-1" class="prev">&#x2039;</label>
+      <label for="img-3" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="img/i3.png" />
+        </div>
+    <div class="nav">
+      <label for="img-2" class="prev">&#x2039;</label>
+      <label for="img-4" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="img/i4.png" />
+        </div>
+    <div class="nav">
+      <label for="img-3" class="prev">&#x2039;</label>
+      <label for="img-5" class="next">&#x203a;</label>
+    </div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+     </li>
+</ul>
+
+  <div id="comp" class="container mt-5">
+  <div class="row">
+    <div class="col-sm">
+    <<img src="img/p2-21-21.png">
+    </div></div></div>
+
+    <div id="pdt" class="container mt-5">
+  <div class="row">
+    <div class="col">
+    <img src="img/p3b-23-23.png">
+    </div>  
+<!-- Content here -->
+
+
+     <div class="mt-5 mb-5 ml-5 container">
+  <div class="row">
+    <div class="col-2">
+      <div class="card" style="width: 10rem;">
+<img class="card-img-top" src="img/test-22.png" alt="Card image cap">
+<div class="card-body">
+<a href="img/photo彩盒-28.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+    <div class="col-10">
+<div class="card" style="width: 10rem;">
+<img class="card-img-top" src="img/p3b-24.png" alt="Card image cap">
+<div class="card-body">
+<a href="img/photo紙箱-32.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>   
+</div>
+</div>
+
+
+<div class="row">
+<div class="col">
+<div class="card" style="width: 10rem;">
+<img class="card-img-top" src="img/p3b-25.png" alt="Card image cap">
+<div class="card-body">
+<a href="img/photo手提袋-26.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card" style="width: 10rem;">
+<img class="card-img-top" src="img/p3b-26.png" alt="Card image cap">
+<div class="card-body">
+<a href="img/photo貼紙-32.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card" style="width: 10rem;">
+<img class="card-img-top" src="img/p3b-27.png" alt="Card image cap">
+<div class="card-body">
+<a href="img/photo名片-31.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="pcs" class="container mb-5 ml-1 mt-5">
+  <div class="row">
+  <div class="col"><img src="img/p41-29.png"></div>
+</div></div>
+
+<div class="container">
+ <div class="row">
+<div class="col">
+<div class="card" style="width: 15rem;">
+<div class="card-body">
+<h4 class="card-title fontm">膜態-->亮/霧膜
+</h4>
+<a href="img/photo亮膜與霧膜-33.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card" style="width: 15rem;">
+<div class="card-body">
+<h4 class="card-title fontm">液態-->UV/PVC</h4>
+<a href="img/photo UV與PVC-35.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+<div class="w-100"></div>
+<div class="col">
+<div class="card" style="width: 15rem;">
+<div class="card-body">
+<h4 class="card-title fontm">燙金/銀</h4>
+<a href="img/photo燙金與燙銀-36.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card" style="width: 15rem;">
+<div class="card-body">
+<h4 class="card-title fontm">特殊壓紋</h4>
+<a href="img/photo特殊壓紋-37.png" class="btn btn-primary">展示</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="cus" class="container mb-5 ml-1 mt-5">
+  <div class="row">
+  <div class="col"><img src="img/page-5-32-32.png"></div>
+</div></div>
+
+
+ <div id="au" class="container mt-5 mb-5">
+  <div class="row">
+  <div class="col mb-5 fontbig">聯絡我們</div>
+  <div class="col-6 fontm">
+    營業時間:周一至周五      上午8點至下午5點</div>
+  
+  </div>
+  <div class="row">
+  <div class="col">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58261.76683730847!2d120.60860365686905!3d24.12397730796544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d1438fb3d3f%3A0xb7b4ebd02f1906b6!2z6Ie65Lit6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1510559883105" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="col-2 fontsmall">中部 辦公室</div>
+  <div class="col fontsmall">電話:04-12345678<p>
+                   傳真:04-98765432<p>
+           台中市三十路6巷10號5樓5之8<p>
+               信箱:987654@gmil.com</div>
+ </div>
+  <div class="row">
+  <div class="col mt-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.4826557285633!2d120.43894951539772!3d23.47911868472378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e9428d6a5d377%3A0xbdc4e556e7a1a84a!2z5ZiJ576p6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1510559936078" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+  <div class="col-2 mt-5 fontsmall">南部 工廠</div>
+  <div class="col mt-5 fontsmall">電話:05-12345678<p>
+                   傳真:05-98765432<p>
+           嘉義市三十路6巷10號5樓5之8<p>
+               信箱:987654@gmil.com</div>      
+</div>
+</div>
+</div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
